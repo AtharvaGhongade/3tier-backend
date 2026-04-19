@@ -1,6 +1,8 @@
 import os
 import mysql.connector
 from flask import Flask, jsonify
+from flask_cors import CORS
+CORS(app, origins=['https://icy-field-088b46d00.7.azurestaticapps.net'])
 app = Flask(__name__)
 def get_db_connection():
 return mysql.connector.connect(
